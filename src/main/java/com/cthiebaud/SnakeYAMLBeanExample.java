@@ -1,36 +1,40 @@
 package com.cthiebaud;
 
 import org.yaml.snakeyaml.Yaml;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class SnakeYAMLBeanExample {
     public static void main(String[] args) throws IOException {
-        // Define file path
-        String filePath = "example-bean.yaml";
-
+        // Create YAML instance
+        Yaml yaml = new Yaml();
         // Read data from YAML file
-        Path path = Paths.get(filePath);
-        if (Files.exists(path)) {
-            // Create YAML instance
-            Yaml yaml = new Yaml();
-
+        Path path = Paths.get("example-bean.yaml");
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
             // Deserialize YAML data into Java bean
-            NameAndBirthBean bean = yaml.loadAs(Files.newBufferedReader(path), NameAndBirthBean.class);
-
+            NameAndBirthBean bean = yaml.loadAs(reader, NameAndBirthBean.class);
             // Display bean details
-            System.out.println("Bean Details:");
             System.out.println("Name: " + bean.getName());
             System.out.println("Birth: " + bean.getBirth());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     // Java bean class representing Name and Birth attributes
     public static class NameAndBirthBean {
+
+        static DateTimeFormatter formatterIn = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        static DateTimeFormatter formatterOut = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+
         private String name;
-        private String birth;
+        private LocalDate birth;
 
         // Getters and setters
         public String getName() {
@@ -42,11 +46,11 @@ public class SnakeYAMLBeanExample {
         }
 
         public String getBirth() {
-            return birth;
+            return birth.format(formatterOut);
         }
 
         public void setBirth(String birth) {
-            this.birth = birth;
+            this.birth = LocalDate.parse(birth, formatterIn);
         }
     }
 }
