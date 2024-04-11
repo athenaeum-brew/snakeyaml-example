@@ -19,7 +19,7 @@ public class SnakeYAMLReadExample {
         Yaml yaml = new Yaml();
 
         // Define file path
-        String filePath = "example-object.yaml";
+        String filePath = "example-bean.yaml";
 
         // Read data from YAML file
         Path path = Paths.get(filePath);
