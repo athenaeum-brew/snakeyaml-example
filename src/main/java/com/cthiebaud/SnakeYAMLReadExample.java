@@ -14,6 +14,8 @@ import java.util.Map;
 */
 public class SnakeYAMLReadExample {
     public static void main(String[] args) {
+        System.out.println("\n" + SnakeYAMLReadExample.class + "\n");
+
         Yaml yaml = new Yaml();
 
         // Define file path

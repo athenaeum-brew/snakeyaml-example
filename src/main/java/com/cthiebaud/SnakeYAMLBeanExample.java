@@ -11,7 +11,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class SnakeYAMLBeanExample {
+
     public static void main(String[] args) throws IOException {
+        System.out.println("\n" + SnakeYAMLBeanExample.class + "\n");
+
         // Create YAML instance
         Yaml yaml = new Yaml();
         // Read data from YAML file

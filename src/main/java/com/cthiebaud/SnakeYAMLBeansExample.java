@@ -16,6 +16,8 @@ import java.util.stream.StreamSupport;
 
 public class SnakeYAMLBeansExample {
     public static void main(String[] args) throws IOException {
+        System.out.println("\n" + SnakeYAMLBeansExample.class + "\n");
+
         // Define file path
         String filePath = "example-beans.yaml";
 
