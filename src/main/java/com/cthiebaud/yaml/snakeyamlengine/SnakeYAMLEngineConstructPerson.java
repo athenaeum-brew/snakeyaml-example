@@ -1,4 +1,4 @@
-package com.cthiebaud.yaml.snakeyamengine;
+package com.cthiebaud.yaml.snakeyamlengine;
 
 import org.snakeyaml.engine.v2.api.ConstructNode;
 import org.snakeyaml.engine.v2.nodes.MappingNode;

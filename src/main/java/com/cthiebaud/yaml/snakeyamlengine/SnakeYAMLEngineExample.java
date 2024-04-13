@@ -1,4 +1,4 @@
-package com.cthiebaud.yaml.snakeyamengine;
+package com.cthiebaud.yaml.snakeyamlengine;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
