@@ -15,9 +15,9 @@ rm -rf build
 mkdir build
 
 # Compile Java source files and place class files in the build directory
-javac -d build -cp "$(basename $SNAKEYAML_JAR)" src/main/java/com/cthiebaud/SnakeYAMLReadExample.java
+javac -d build -cp "$(basename $SNAKEYAML_JAR)" src/main/java/com/cthiebaud/yaml/snakeyaml/SnakeYAMLReadExample.java
 # Check if compilation was successful
 [ $? -eq 0 ] || { echo "Compilation failed."; exit 1; }
 
 # Run the Java program with the necessary classpath
-java -cp "build:$(basename $SNAKEYAML_JAR)" com.cthiebaud.SnakeYAMLReadExample
+java -cp "build:$(basename $SNAKEYAML_JAR)" com.cthiebaud.yaml.snakeyaml.SnakeYAMLReadExample

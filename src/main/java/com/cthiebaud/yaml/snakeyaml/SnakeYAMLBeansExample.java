@@ -1,9 +1,9 @@
-package com.cthiebaud;
+package com.cthiebaud.yaml.snakeyaml;
 
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
-import com.cthiebaud.SnakeYAMLBeanExample.NameAndBirthBean;
+import com.cthiebaud.yaml.snakeyaml.SnakeYAMLBeanExample.NameAndBirthBean;
 
 import org.yaml.snakeyaml.LoaderOptions;
 import java.io.IOException;

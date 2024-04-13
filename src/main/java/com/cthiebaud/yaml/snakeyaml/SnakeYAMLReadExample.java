@@ -1,4 +1,4 @@
-package com.cthiebaud;
+package com.cthiebaud.yaml.snakeyaml;
 
 import org.yaml.snakeyaml.Yaml;
 
@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.util.Map;
 
 /*
-    mvn exec:java -Dexec.mainClass="com.cthiebaud.SnakeYAMLReadExample"
+    mvn exec:java -Dexec.mainClass="com.cthiebaud.yaml.snakeyaml.SnakeYAMLReadExample"
 */
 public class SnakeYAMLReadExample {
     public static void main(String[] args) {

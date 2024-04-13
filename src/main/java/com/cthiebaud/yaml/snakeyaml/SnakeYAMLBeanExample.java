@@ -1,4 +1,4 @@
-package com.cthiebaud;
+package com.cthiebaud.yaml.snakeyaml;
 
 import org.yaml.snakeyaml.Yaml;
 
